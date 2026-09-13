@@ -1,0 +1,671 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #0b0e13;
+
+    color: white;
+}
+
+
+/* ========================================
+   BOOKING PAGE
+======================================== */
+
+.booking-page {
+    width: 100%;
+
+    min-height: 100vh;
+
+    background: #0b0e13;
+
+    padding: 55px 20px 80px;
+}
+
+
+.booking-container {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.booking-header {
+    text-align: center;
+
+    margin-bottom: 65px;
+}
+
+
+.booking-header h1 {
+    color: #f5f5f6;
+
+    font-size: 50px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+
+    letter-spacing: -1px;
+}
+
+
+.booking-header p {
+    color: #9bb0c8;
+
+    font-size: 20px;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   STEPS
+======================================== */
+
+.steps {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-bottom: 65px;
+}
+
+
+.step {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #94a7bd;
+
+    font-size: 14px;
+}
+
+
+.step.active {
+    color: #ffffff;
+}
+
+
+.step-number {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #182235;
+
+    color: #9eb0c7;
+
+    font-size: 14px;
+}
+
+
+.step.active .step-number {
+    background: #2868e8;
+
+    color: white;
+}
+
+
+.step-arrow {
+    color: #718299;
+
+    font-size: 22px;
+}
+
+
+/* ========================================
+   SERVICE SECTION
+======================================== */
+
+.service-section {
+    margin-bottom: 40px;
+}
+
+
+.service-section > h2 {
+    color: #f3f4f6;
+
+    font-size: 23px;
+
+    margin-bottom: 28px;
+}
+
+
+/* ========================================
+   SERVICE CARDS
+======================================== */
+
+.service-cards {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+}
+
+
+.booking-card {
+    min-height: 345px;
+
+    background: #14171f;
+
+    border: 1px solid #293544;
+
+    border-radius: 14px;
+
+    padding: 35px 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.booking-card:hover {
+    border-color: #405169;
+
+    transform: translateY(-3px);
+}
+
+
+/* Selected card */
+
+.booking-card.selected {
+    background: #10192b;
+
+    border: 2px solid #2868e8;
+}
+
+
+/* ========================================
+   CARD TOP
+======================================== */
+
+.card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+}
+
+
+.division {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.software-division {
+    color: #2877ff;
+}
+
+
+.taxation-division {
+    color: #00c3b8;
+}
+
+
+/* Check */
+
+.check {
+    width: 22px;
+    height: 22px;
+
+    border: 2px solid #2877ff;
+
+    color: #2877ff;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   CARD CONTENT
+======================================== */
+
+.booking-card h3 {
+    color: #f3f4f6;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+.booking-card p {
+    color: #99abc1;
+
+    font-size: 16px;
+
+    line-height: 1.55;
+
+    max-width: 500px;
+
+    margin-bottom: 27px;
+}
+
+
+/* ========================================
+   DURATIONS
+======================================== */
+
+.duration-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.duration-list div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #9aaec6;
+
+    font-size: 14px;
+}
+
+
+.duration-list span {
+    color: #2877ff;
+
+    font-size: 15px;
+}
+
+
+.tax-list span {
+    color: #00c3b8;
+}
+
+
+/* ========================================
+   SESSION TYPE
+======================================== */
+
+.session-section {
+    margin-top: 35px;
+
+    margin-bottom: 32px;
+}
+
+
+.session-section h3 {
+    color: #f1f3f5;
+
+    font-size: 16px;
+
+    margin-bottom: 18px;
+}
+
+
+.session-options {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+.session-btn {
+    height: 48px;
+
+    padding: 0 22px;
+
+    background: #14171f;
+
+    color: #a1b1c6;
+
+    border: 1px solid #293544;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.session-btn:hover {
+    border-color: #416083;
+
+    color: white;
+}
+
+
+.session-btn.active {
+    background: #2868e8;
+
+    border-color: #2868e8;
+
+    color: white;
+
+    box-shadow:
+        0 7px 20px rgba(40, 104, 232, 0.25);
+}
+
+
+/* ========================================
+   CONTINUE BUTTON
+======================================== */
+
+.continue-btn {
+    width: 100%;
+
+    height: 62px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #2868e8;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(40, 104, 232, 0.25);
+
+    transition: 0.25s ease;
+}
+
+
+.continue-btn:hover {
+    background: #3677f5;
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   LARGE DESKTOP
+======================================== */
+
+@media (min-width: 1500px) {
+
+    .booking-page {
+        padding-top: 75px;
+    }
+
+    .booking-container {
+        max-width: 1450px;
+    }
+
+    .booking-header h1 {
+        font-size: 62px;
+    }
+
+    .booking-header p {
+        font-size: 22px;
+    }
+
+    .booking-card {
+        min-height: 390px;
+
+        padding: 40px;
+    }
+
+    .booking-card h3 {
+        font-size: 30px;
+    }
+
+    .booking-card p {
+        font-size: 17px;
+    }
+
+    .duration-list div {
+        font-size: 15px;
+    }
+
+    .continue-btn {
+        height: 68px;
+
+        font-size: 19px;
+    }
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 850px) {
+
+    .booking-page {
+        padding: 50px 25px 70px;
+    }
+
+    .booking-header h1 {
+        font-size: 42px;
+    }
+
+    .booking-header p {
+        font-size: 17px;
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-card {
+        min-height: auto;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .booking-page {
+        padding: 40px 16px 55px;
+    }
+
+
+    /* Header */
+
+    .booking-header {
+        margin-bottom: 45px;
+    }
+
+    .booking-header h1 {
+        font-size: 34px;
+
+        line-height: 1.15;
+    }
+
+    .booking-header p {
+        font-size: 15px;
+
+        line-height: 1.55;
+    }
+
+    .desktop-break {
+        display: none;
+    }
+
+
+    /* Steps */
+
+    .steps {
+        gap: 8px;
+
+        margin-bottom: 45px;
+    }
+
+    .step {
+        gap: 6px;
+
+        font-size: 11px;
+    }
+
+    .step-number {
+        width: 30px;
+        height: 30px;
+
+        font-size: 12px;
+    }
+
+    .step-arrow {
+        font-size: 18px;
+    }
+
+
+    /* Service */
+
+    .service-section > h2 {
+        font-size: 21px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* Cards */
+
+    .service-cards {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .booking-card {
+        min-height: auto;
+
+        padding: 25px 21px;
+
+        border-radius: 12px;
+    }
+
+    .booking-card.selected {
+        border-width: 2px;
+    }
+
+
+    /* Card */
+
+    .card-top {
+        margin-bottom: 22px;
+    }
+
+    .division {
+        font-size: 12px;
+    }
+
+    .booking-card h3 {
+        font-size: 22px;
+    }
+
+    .booking-card p {
+        font-size: 14px;
+
+        line-height: 1.55;
+
+        margin-bottom: 22px;
+    }
+
+
+    /* Durations */
+
+    .duration-list {
+        gap: 10px;
+    }
+
+    .duration-list div {
+        font-size: 12px;
+    }
+
+
+    /* Session */
+
+    .session-section {
+        margin-top: 30px;
+    }
+
+    .session-options {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .session-btn {
+        width: 100%;
+
+        height: 48px;
+
+        font-size: 13px;
+    }
+
+
+    /* Continue */
+
+    .continue-btn {
+        height: 58px;
+
+        font-size: 16px;
+
+        border-radius: 8px;
+    }
+}

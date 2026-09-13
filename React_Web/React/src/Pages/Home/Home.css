@@ -1,0 +1,366 @@
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 125px);
+
+    position: relative;
+    overflow: hidden;
+
+    background: #0b0e13;
+}
+
+
+/* =========================
+   GRID BACKGROUND
+========================= */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(48, 74, 108, 0.12) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(48, 74, 108, 0.12) 1px,
+            transparent 1px
+        );
+
+    background-size: 72px 56px;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 1215px;
+
+    margin: 0 ;
+
+    padding: 32px 13px 70px;
+}
+
+
+/* =========================
+   TRUST BADGE
+========================= */
+
+.trust-badge {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 11px;
+
+    padding: 9px 17px;
+
+    border: 1px solid #2455a0;
+    border-radius: 30px;
+
+    background: rgba(16, 29, 48, 0.45);
+
+    color: #3679f5;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    margin-bottom: 34px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+
+    background: #3679f5;
+
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.hero h1 {
+    font-size: clamp(64px, 7vw, 100px);
+
+    line-height: 1.01;
+
+    letter-spacing: -4px;
+
+    font-weight: 700;
+
+    color: #f4f4f5;
+
+    margin-bottom: 36px;
+}
+
+.hero h1 span {
+    display: inline-block;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero-description {
+    max-width: 950px;
+
+    color: #9db2cc;
+
+    font-size: 29px;
+
+    line-height: 1.38;
+
+    margin-bottom: 57px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+
+.btn {
+    height: 76px;
+
+    padding: 0 38px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    transition: all 0.25s ease;
+}
+
+
+/* Software Button */
+
+.software-btn {
+    min-width: 359px;
+
+    background: #2864e5;
+
+    color: white;
+
+    box-shadow:
+        0 10px 30px rgba(31, 94, 226, 0.25);
+}
+
+.software-btn:hover {
+    background: #3673f5;
+
+    transform: translateY(-2px);
+}
+
+
+/* Tax Button */
+
+.taxation-btn {
+    min-width: 316px;
+
+    background: rgba(0, 145, 140, 0.05);
+
+    color: #00c5bb;
+
+    border: 1px solid #008d88;
+}
+
+.taxation-btn:hover {
+    background: rgba(0, 190, 180, 0.10);
+
+    transform: translateY(-2px);
+}
+
+
+/* Button Icons */
+
+.btn-icon {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        padding: 35px 30px 60px;
+    }
+
+    .hero h1 {
+        font-size: 72px;
+        letter-spacing: -3px;
+    }
+
+    .hero-description {
+        font-size: 23px;
+        max-width: 800px;
+    }
+
+    .btn {
+        height: 65px;
+        font-size: 18px;
+    }
+
+    .software-btn {
+        min-width: 300px;
+    }
+
+    .taxation-btn {
+        min-width: 270px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: calc(100vh - 80px);
+    }
+
+    .hero-content {
+        padding: 28px 20px 50px;
+    }
+
+
+    /* Badge */
+
+    .trust-badge {
+        font-size: 13px;
+
+        padding: 8px 13px;
+
+        gap: 8px;
+
+        margin-bottom: 28px;
+    }
+
+    .dot {
+        width: 7px;
+        height: 7px;
+    }
+
+
+    /* Heading */
+
+    .hero h1 {
+        font-size: 51px;
+
+        line-height: 1.04;
+
+        letter-spacing: -2px;
+
+        margin-bottom: 28px;
+    }
+
+
+    /* Description */
+
+    .hero-description {
+        font-size: 18px;
+
+        line-height: 1.55;
+
+        margin-bottom: 35px;
+    }
+
+
+    /* Buttons */
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 14px;
+    }
+
+    .btn {
+        width: 100%;
+
+        min-width: 0 !important;
+
+        height: 58px;
+
+        font-size: 17px;
+
+        border-radius: 9px;
+    }
+
+    .btn-icon {
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+    .hero-content {
+        padding: 25px 16px 40px;
+    }
+
+    .trust-badge {
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 15px;
+    }
+}

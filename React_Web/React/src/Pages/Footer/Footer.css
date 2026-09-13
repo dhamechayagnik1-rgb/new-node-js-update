@@ -1,0 +1,300 @@
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #0b0d11;
+    border-top: 1px solid #1c314c;
+    padding: 40px 20px 20px;
+    color: #9db0c8;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr 0.8fr;
+    gap: 70px;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 32px;
+}
+
+.logo-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #0066ff;
+    font-size: 42px;
+    font-weight: 900;
+    font-family: Arial, sans-serif;
+
+    transform: scaleX(1.1);
+}
+
+.logo span {
+    color: #f5f5f5;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description {
+    max-width: 285px;
+
+    color: #9db0c8;
+
+    font-size: 21px;
+    line-height: 1.7;
+
+    margin-bottom: 38px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    font-size: 19px;
+    color: #9db0c8;
+}
+
+.icon {
+    width: 16px;
+    color: #9db0c8;
+    font-size: 21px;
+}
+
+
+/* =========================
+   COLUMNS
+========================= */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer-column h3 {
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+
+/* Heading colors */
+
+.software-title {
+    color: #1264ff;
+}
+
+.tax-title {
+    color: #00b5ad;
+}
+
+.company-title {
+    color: #9db0c8;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.footer-column a {
+    text-decoration: none;
+
+    color: #9db0c8;
+
+    font-size: 21px;
+    line-height: 1.2;
+
+    transition: 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .footer {
+        padding: 60px 35px 45px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px 40px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .description {
+        max-width: 500px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding: 45px 22px 35px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
+    }
+
+
+    /* Brand */
+
+    .footer-brand {
+        width: 100%;
+    }
+
+    .logo {
+        gap: 10px;
+        margin-bottom: 22px;
+    }
+
+    .logo-icon {
+        font-size: 36px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo span {
+        font-size: 21px;
+        letter-spacing: 3px;
+    }
+
+
+    /* Description */
+
+    .description {
+        max-width: 100%;
+
+        font-size: 17px;
+        line-height: 1.65;
+
+        margin-bottom: 28px;
+    }
+
+
+    /* Contact */
+
+    .contact-info {
+        gap: 18px;
+    }
+
+    .contact-item {
+        font-size: 16px;
+        gap: 12px;
+    }
+
+    .icon {
+        font-size: 19px;
+    }
+
+
+    /* Columns */
+
+    .footer-column {
+        width: 100%;
+        gap: 17px;
+    }
+
+    .footer-column h3 {
+        font-size: 15px;
+        letter-spacing: 2px;
+
+        margin-bottom: 5px;
+    }
+
+    .footer-column a {
+        font-size: 17px;
+        line-height: 1.4;
+
+        padding: 3px 0;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+    .footer {
+        padding: 40px 18px 30px;
+    }
+
+    .logo span {
+        font-size: 19px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .footer-column a {
+        font-size: 16px;
+    }
+
+    .contact-item {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,254 @@
+
+/* =========================================
+   WHY YAGNIK - EXTRA LARGE
+========================================= */
+
+.why-yagnik {
+    width: 100%;
+    min-height: 720px;
+
+    background: #0b0e13;
+
+    padding: 50px 2% 130px;
+
+    color: white;
+}
+
+.why-container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+/* LABEL */
+
+.why-label {
+    color: #2875ff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 22px;
+}
+
+
+/* MAIN HEADING */
+
+.why-title {
+    color: #f5f5f6;
+
+    font-size: 58px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 65px;
+}
+
+
+/* CARDS */
+
+.why-cards {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 24px;
+}
+
+
+/* CARD */
+
+.why-card {
+    min-height: 330px;
+
+    padding: 40px 32px;
+
+    background: #14171f;
+
+    border: 1px solid #293544;
+
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+}
+
+.why-card:first-child {
+    border-color: #2457a0;
+}
+
+.why-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #465a72;
+}
+
+
+/* NUMBER */
+
+.why-number {
+    color: #2868df;
+
+    font-size: 50px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    margin-bottom: 24px;
+}
+
+
+/* CARD TITLE */
+
+.why-card h3 {
+    color: #f3f4f6;
+
+    font-size: 22px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+
+/* CARD DESCRIPTION */
+
+.why-card p {
+    color: #91a4bb;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   BIG DESKTOP
+========================================= */
+
+@media (min-width: 1600px) {
+
+    .why-yagnik {
+        padding-top: 140px;
+        padding-bottom: 150px;
+    }
+
+    .why-title {
+        font-size: 64px;
+    }
+
+    .why-card {
+        min-height: 360px;
+
+        padding: 45px 38px;
+    }
+
+    .why-number {
+        font-size: 56px;
+    }
+
+    .why-card h3 {
+        font-size: 24px;
+    }
+
+    .why-card p {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .why-yagnik {
+        padding: 90px 35px 100px;
+    }
+
+    .why-title {
+        font-size: 46px;
+
+        margin-bottom: 45px;
+    }
+
+    .why-cards {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+    }
+
+    .why-card {
+        min-height: 280px;
+
+        padding: 32px 28px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .why-yagnik {
+        min-height: auto;
+
+        padding: 70px 20px 80px;
+    }
+
+    .why-label {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+    .why-title {
+        font-size: 34px;
+
+        line-height: 1.15;
+
+        margin-bottom: 35px;
+    }
+
+    .why-cards {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .why-card {
+        min-height: 240px;
+
+        padding: 30px 24px;
+    }
+
+    .why-number {
+        font-size: 40px;
+    }
+
+    .why-card h3 {
+        font-size: 20px;
+    }
+
+    .why-card p {
+        font-size: 13px;
+
+        line-height: 1.65;
+    }
+}
