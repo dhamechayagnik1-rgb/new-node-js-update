@@ -1,7 +1,8 @@
 
 
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import './bookingp.css'
+import { DisplayContext } from '../context'
 
 
 function FirstBookingPage(props) {
@@ -12,10 +13,12 @@ function FirstBookingPage(props) {
     const [Active1, setActive1] = useState(false)
     const [Active2, setActive2] = useState(false)
     const [Active3, setActive3] = useState(false)
-
-
-
-
+    const value = useContext(DisplayContext)
+    
+     const changebutton1 = () => {
+        value.setButton1(!value.button1)
+       
+    }
 
     const changeActive1 = () => {
         setActive1(!Active1)
@@ -193,7 +196,7 @@ function FirstBookingPage(props) {
 
 
 
-            <button class="continue-btn">
+            <button class="continue-btn" onClick={()=> changebutton1()}>
                 Continue to Date &amp; Time
             </button>
 

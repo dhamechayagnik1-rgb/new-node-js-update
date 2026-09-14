@@ -1,11 +1,19 @@
 
 
+import { useState } from 'react'
 import FirstBookingPage from './Bookingfirst'
 import './bookingp.css'
+import { DisplayContext } from '../context'
+
+import Secondpage from './Second'
 
 
 
 function MainBookingp(props) {
+    const [button1, setButton1] = useState(false)
+
+
+
 
     return (
         <>
@@ -35,14 +43,14 @@ function MainBookingp(props) {
 
                     <div class="steps">
 
-                        <div class="step active">
+                        <div class={button1?"step":"step active"}>
                             <span class="step-number">1</span>
                             <strong>Service</strong>
                         </div>
 
                         <span class="step-arrow">›</span>
 
-                        <div class="step">
+                        <div class={button1?"step active":"step"}>
                             <span class="step-number">2</span>
                             <span>Date &amp; Time</span>
                         </div>
@@ -55,8 +63,11 @@ function MainBookingp(props) {
                         </div>
 
                     </div>
+                    <DisplayContext.Provider value={{button1, setButton1}}>
+                    {button1? <Secondpage/>:<FirstBookingPage/>}
+                    </DisplayContext.Provider>
 
-                    <FirstBookingPage/>
+                   
 
 
                 </div>
