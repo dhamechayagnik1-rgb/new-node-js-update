@@ -1,60 +1,54 @@
 
 
+import { useState } from 'react'
 import './bookingp.css'
 
 
-function Bookingp() {
-
-    
-  
-  return (
-    <>
-      
-     <section class="booking-page">
-
-        <div class="booking-container">
-
-       
-
-            <div class="booking-header">
-
-                <h1>
-                    Book Your Consultation
-                </h1>
-
-                <p>
-                    Choose the service you need and pick a time that works for you.
-                    We'll confirm<br class="desktop-break"/>
-                    your appointment within 2 hours.
-                </p>
-
-            </div>
+function FirstBookingPage(props) {
 
 
-           
-            <div class="steps">
+    const [change, setChange] = useState(false)
+    const [changen, setChangen] = useState(false)
+    const [Active1, setActive1] = useState(false)
+    const [Active2, setActive2] = useState(false)
+    const [Active3, setActive3] = useState(false)
 
-                <div class="step active">
-                    <span class="step-number">1</span>
-                    <strong>Service</strong>
-                </div>
 
-                <span class="step-arrow">›</span>
 
-                <div class="step">
-                    <span class="step-number">2</span>
-                    <span>Date &amp; Time</span>
-                </div>
 
-                <span class="step-arrow">›</span>
 
-                <div class="step">
-                    <span class="step-number">3</span>
-                    <span>Your Details</span>
-                </div>
+    const changeActive1 = () => {
+        setActive1(!Active1)
+        setActive2(false)
+        setActive3(false)
+    }
+    const changeActive2 = () => {
+        setActive1(false)
+        setActive2(!Active2)
+        setActive3(false)
+    }
+    const changeActive3 = () => {
+        setActive1(false)
+        setActive2(false)
+        setActive3(!Active3)
+    }
 
-            </div>
 
+
+
+    const changetoggle = () => {
+        setChange(!change);
+        setChangen(false);
+    };
+
+    const newtoggle = () => {
+        setChangen(!changen);
+        setChange(false);
+    };
+
+
+    return (
+        <>
 
             <div class="service-section">
 
@@ -66,7 +60,7 @@ function Bookingp() {
                 <div class="service-cards">
 
 
-                    <div class="booking-card selected">
+                    <div class={change ? "booking-card selected" : "booking-card"} onClick={() => changetoggle()}>
 
                         <div class="card-top">
 
@@ -75,7 +69,8 @@ function Bookingp() {
                                 Software Division
                             </div>
 
-                            <div class="check">
+
+                            <div class={change ? "check" : "checkenable"}>
                                 ✓
                             </div>
 
@@ -115,7 +110,7 @@ function Bookingp() {
 
 
 
-                    <div class="booking-card ">
+                    <div class={changen ? "booking-card selected" : "booking-card"} onClick={() => newtoggle()}>
 
                         <div class="card-top">
 
@@ -124,12 +119,12 @@ function Bookingp() {
                                 Taxation Division
                             </div>
 
-                            <div class="check">
+                            <div class={changen ? "check" : "checkenable"}>
                                 ✓
                             </div>
 
                         </div>
-                        
+
 
 
                         <h3>
@@ -140,7 +135,7 @@ function Bookingp() {
                             GST filing, income tax advisory,
                             compliance support, and financial planning.
                         </p>
-                        
+
 
 
                         <div class="duration-list tax-list">
@@ -169,7 +164,7 @@ function Bookingp() {
             </div>
 
 
-        
+
 
             <div class="session-section">
 
@@ -179,15 +174,15 @@ function Bookingp() {
 
                 <div class="session-options">
 
-                    <button class="session-btn">
+                    <button class={Active1 ? "session-btn active" : "session-btn"} onClick={() => changeActive1()}>
                         30-min Discovery Call
                     </button>
 
-                    <button class="session-btn active">
+                    <button class={Active2 ? "session-btn active" : "session-btn"} onClick={() => changeActive2()}>
                         60-min Project Scoping
                     </button>
 
-                    <button class="session-btn">
+                    <button class={Active3 ? "session-btn active" : "session-btn"} onClick={() => changeActive3()}>
                         90-min Technical Deep Dive
                     </button>
 
@@ -196,19 +191,23 @@ function Bookingp() {
             </div>
 
 
-       
+
 
             <button class="continue-btn">
                 Continue to Date &amp; Time
             </button>
 
 
-        </div>
 
-    </section>
-     
-    </>
-  )
+
+        </>
+    )
 }
 
-export default Bookingp
+export default FirstBookingPage
+
+
+
+
+
+

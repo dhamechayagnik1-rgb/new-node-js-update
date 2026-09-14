@@ -1,7 +1,9 @@
 
 
+import { Component } from 'react'
+import React from 'react'
 import './App.css'
-import Bookingp from './booking_pages/Bookingp'
+import MainBookingp from './booking_pages/MainBookingp'
 import Booking from './Pages/Booking/Booking'
 import Footer from './Pages/Footer/Footer'
 import Home from './Pages/Home/Home'
@@ -9,21 +11,19 @@ import Navbar from './Pages/Navbar/Navbar'
 import Services from './Pages/Services/Services'
 import Why from './Pages/Why/Why'
 
-function App() {
+class App extends React.Component{
   
-  return (
-    <>
-      
-    {/*} <Navbar/>
-      <Home/>
-      <Services/>
-      <Why/>
-      <Booking/>
-      <Footer/> */}
-      <Bookingp/>
-     
-    </>
-  )
+  
+
+  render() {
+
+    return (
+      <>
+
+        <MainBookingp />
+      </>
+    )
+  }
 }
 
 export default App
