@@ -76,9 +76,101 @@
     transform: translateY(-2px);
 }
 
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* =========================
+   MOBILE SIDEBAR
+========================= */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 280px;
+    height: 100vh;
+
+    background: white;
+    z-index: 1001;
+
+    padding: 30px 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    transition: 0.3s ease;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.15);
+}
+
+/* Sidebar open */
+.sidebar.active {
+    right: 2;
+}
+
+/* Close button */
+.close-btn {
+    align-self: flex-end;
+
+    border: none;
+    background: none;
+
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* Mobile links */
+.sidebar a {
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.5);
+
+    z-index: 1000;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Mobile Book Button */
+.mobile-book-btn {
+    background: #111;
+    color: white !important;
+
+    text-align: center;
+
+    padding: 12px !important;
+    border-radius: 8px;
+}
+
 
 
 @media (max-width: 768px) {
+
 
     .navbar {
         height: auto;
@@ -87,6 +179,14 @@
 
         flex-direction: column;
         gap: 20px;
+    }
+
+    .nav-links {
+        display: none;
+        
+    }
+    .menu-btn {
+        display: block;
     }
 
     .logo span {

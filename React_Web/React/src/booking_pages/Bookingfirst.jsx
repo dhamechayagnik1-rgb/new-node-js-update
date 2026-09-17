@@ -2,7 +2,7 @@
 
 import { useContext, useState } from 'react'
 import './bookingp.css'
-import { DisplayContext } from '../context'
+import { DisplayContext, SidebarContext } from '../context'
 
 
 function FirstBookingPage(props) {
@@ -14,8 +14,11 @@ function FirstBookingPage(props) {
     const [Active2, setActive2] = useState(false)
     const [Active3, setActive3] = useState(false)
     const value = useContext(DisplayContext)
+    const side  = useContext(SidebarContext)
     
      const changebutton1 = () => {
+        console.log(value);
+        
         value.setButton1(!value.button1)
        
     }

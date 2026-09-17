@@ -11,10 +11,11 @@ import Home from './Pages/Home/Home'
 import Navbar from './Pages/Navbar/Navbar'
 import Services from './Pages/Services/Services'
 import Why from './Pages/Why/Why'
+import Main from './Pages/Main';
 
 function App() {
   const router = createBrowserRouter([
-    { path: "/", element: <><Navbar/> <Home/> <Services/> <Why/> <Booking/> <Footer/> </> },
+    { path: "/", element: <><Main/></> },
     { path: "/booking", element: <MainBookingp/> },
   ]);
 

@@ -1,8 +1,17 @@
 
 
+import { useState } from 'react'
 import './Navbar.css'
+import Sidebar from './Sidebar'
+import { DisplayContext , SidebarContext} from '../../context'
 
 function Navbar() {
+    const [sidebar, setSidebar] = useState(false)
+
+    const openchange = () => {
+        setSidebar(!sidebar)
+    }
+    
 
     return (
         <>
@@ -13,7 +22,7 @@ function Navbar() {
                     <span>YAGNIK</span>
                 </div>
 
-               
+
                 <div class="nav-links">
 
                     <a href="#home">Home</a>
@@ -26,7 +35,21 @@ function Navbar() {
                         Book Now
                     </a>
 
+
                 </div>
+
+
+                <SidebarContext.Provider value={{sidebar, setSidebar}}>
+                    <button class="menu-btn" onClick={() => openchange()}>
+                        ☰
+                    </button>
+                    {sidebar? <Sidebar/>:null}
+                </SidebarContext.Provider>
+
+                
+
+
+
 
             </nav>
 
