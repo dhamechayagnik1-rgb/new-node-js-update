@@ -16,12 +16,12 @@ function Main() {
     return (
         <>
         
-            <Navbar/>
+           
             <Home />
             <Services />
             <Why />
             <Booking />
-            <Footer />
+            
 
         </>
     )

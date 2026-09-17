@@ -1,0 +1,643 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #080b10;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================================
+   MAIN ABOUT SECTION
+===================================================== */
+
+.about-section {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 120px 7vw 120px;
+
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(45, 92, 180, 0.08),
+            transparent 30%
+        ),
+        #080b10;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.about-hero {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto 150px;
+}
+
+.small-brand {
+    display: inline-block;
+
+    color: #4c8cff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 30px;
+}
+
+.hero-content h1 {
+    font-size: clamp(55px, 6vw, 100px);
+
+    line-height: 1.02;
+
+    font-weight: 700;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 35px;
+}
+
+.hero-content p {
+    max-width: 900px;
+
+    color: #8d97a8;
+
+    font-size: clamp(16px, 1.3vw, 20px);
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   STORY
+===================================================== */
+
+.story-section {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto 120px;
+
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.85fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+.section-label {
+    display: block;
+
+    color: #718096;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 22px;
+}
+
+.story-content h2,
+.principles-section > h2 {
+
+    font-size: clamp(32px, 3vw, 52px);
+
+    line-height: 1.15;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 30px;
+}
+
+.story-content p {
+
+    max-width: 800px;
+
+    color: #8d96a5;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 22px;
+}
+
+
+/* =====================================================
+   STAT CARDS
+===================================================== */
+
+.stats-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.stat-card {
+
+    width: 100%;
+
+    min-height: 125px;
+
+    padding: 28px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background: #121720;
+
+    border: 1px solid #283342;
+
+    border-radius: 12px;
+
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #426da9;
+
+    background: #151b25;
+}
+
+.stat-icon {
+
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #101d3d;
+
+    color: #4388ff;
+
+    font-size: 22px;
+}
+
+.stat-card span {
+
+    display: block;
+
+    color: #8791a1;
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+}
+
+.stat-card strong {
+
+    display: block;
+
+    font-size: 34px;
+
+    line-height: 1;
+
+    margin-bottom: 6px;
+}
+
+.stat-card small {
+
+    color: #657081;
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   TWO DIVISIONS
+===================================================== */
+
+.division-grid {
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto 140px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.division-card {
+
+    min-height: 390px;
+
+    padding: 42px;
+
+    background: #121720;
+
+    border: 1px solid #283342;
+
+    border-radius: 12px;
+
+    transition: all 0.3s ease;
+}
+
+.division-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #426da9;
+}
+
+.division-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #4b8cff;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-bottom: 30px;
+}
+
+.division-label i {
+
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+
+    background: #4388ff;
+
+    border-radius: 50%;
+}
+
+.taxation-card .division-label {
+
+    color: #27c7a0;
+}
+
+.taxation-card .division-label i {
+
+    background: #27c7a0;
+}
+
+.division-card h3 {
+
+    font-size: 28px;
+
+    line-height: 1.25;
+
+    margin-bottom: 20px;
+}
+
+.division-card p {
+
+    max-width: 700px;
+
+    color: #8993a3;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+.division-card ul {
+
+    list-style: none;
+}
+
+.division-card li {
+
+    position: relative;
+
+    padding-left: 23px;
+
+    color: #a5adba;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 13px;
+}
+
+.division-card li::before {
+
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    color: #4388ff;
+
+    font-weight: bold;
+}
+
+.taxation-card li::before {
+
+    color: #27c7a0;
+}
+
+
+/* =====================================================
+   PRINCIPLES
+===================================================== */
+
+.principles-section {
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+}
+
+.principles-section > h2 {
+
+    margin-bottom: 45px;
+}
+
+.principles-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.principle-card {
+
+    min-height: 220px;
+
+    padding: 32px;
+
+    background: #121720;
+
+    border: 1px solid #283342;
+
+    border-radius: 12px;
+
+    transition: all 0.3s ease;
+}
+
+.principle-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #426da9;
+}
+
+.number {
+
+    color: #4388ff;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-bottom: 30px;
+}
+
+.principle-card h3 {
+
+    font-size: 21px;
+
+    margin-bottom: 15px;
+}
+
+.principle-card p {
+
+    max-width: 650px;
+
+    color: #858f9f;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   LARGE SCREEN
+===================================================== */
+
+@media (min-width: 1600px) {
+
+    .about-section {
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+
+    .hero-content h1 {
+        font-size: 105px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+
+    .division-card {
+        min-height: 420px;
+    }
+
+    .principle-card {
+        min-height: 240px;
+    }
+}
+
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .about-section {
+        padding: 90px 5vw;
+    }
+
+    .story-section {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .stats-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .stat-card {
+        min-height: 120px;
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .about-section {
+        padding: 75px 30px;
+    }
+
+    .about-hero {
+        margin-bottom: 90px;
+    }
+
+    .hero-content h1 {
+        font-size: 58px;
+        letter-spacing: -2px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .division-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 550px) {
+
+    .about-section {
+        padding: 60px 20px;
+    }
+
+    .about-hero {
+        margin-bottom: 75px;
+    }
+
+    .small-brand {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        margin-bottom: 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .story-section {
+        gap: 40px;
+        margin-bottom: 80px;
+    }
+
+    .section-label {
+        font-size: 10px;
+    }
+
+    .story-content h2,
+    .principles-section > h2 {
+        font-size: 30px;
+    }
+
+    .story-content h2 br {
+        display: none;
+    }
+
+    .story-content p {
+        font-size: 13px;
+    }
+
+    .stat-card {
+        min-height: 100px;
+        padding: 20px;
+    }
+
+    .stat-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .stat-card strong {
+        font-size: 27px;
+    }
+
+    .division-grid {
+        margin-bottom: 80px;
+    }
+
+    .division-card {
+        padding: 28px;
+        min-height: auto;
+    }
+
+    .division-card h3 {
+        font-size: 22px;
+    }
+
+    .division-card p {
+        font-size: 13px;
+    }
+
+    .division-card li {
+        font-size: 12px;
+    }
+
+    .principle-card {
+        min-height: 180px;
+        padding: 25px;
+    }
+
+    .principle-card h3 {
+        font-size: 18px;
+    }
+}

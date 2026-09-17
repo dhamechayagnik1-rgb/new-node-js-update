@@ -12,11 +12,16 @@ import Navbar from './Pages/Navbar/Navbar'
 import Services from './Pages/Services/Services'
 import Why from './Pages/Why/Why'
 import Main from './Pages/Main';
+import About from './Pages/About/About';
+import Contact from './Pages/Contact/Contact';
 
 function App() {
   const router = createBrowserRouter([
-    { path: "/", element: <><Main/></> },
-    { path: "/booking", element: <MainBookingp/> },
+    { path: "/", element: <><Main /></> },
+    { path: "/booking", element: <MainBookingp /> },
+    { path: "/About", element: <About/> },
+    { path: "/Services", element: <Services/> },
+    { path: "/Contact", element: <Contact/> },
   ]);
 
 
@@ -24,7 +29,9 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <RouterProvider router={router} />
+      <Footer />
 
     </>
   )

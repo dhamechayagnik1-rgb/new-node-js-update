@@ -1,0 +1,960 @@
+/* =========================================================
+   YAGNIK CONTACT PAGE
+   FULL SCREEN / LARGE DESIGN
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    background: #080b10;
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.contact-section {
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 100px 5vw 120px;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(43, 91, 190, 0.08),
+            transparent 30%
+        ),
+        #080b10;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.contact-hero {
+
+    width: 100%;
+
+    margin-bottom: 80px;
+}
+
+
+/* =========================================================
+   CONTACT BADGE
+========================================================= */
+
+.contact-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 10px 18px;
+
+    margin-bottom: 28px;
+
+    background: #101a30;
+
+    border-radius: 30px;
+
+    color: #4388ff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.contact-badge span {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.contact-hero h1 {
+
+    margin-bottom: 28px;
+
+    color: #f5f5f7;
+
+    font-size: clamp(60px, 6vw, 100px);
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: -4px;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.contact-hero > p {
+
+    width: 100%;
+
+    max-width: 950px;
+
+    color: #8fa0b7;
+
+    font-size: clamp(18px, 1.4vw, 23px);
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   MAIN CONTACT LAYOUT
+========================================================= */
+
+.contact-layout {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 0.78fr 1.22fr;
+
+    gap: 40px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.contact-left {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   INFORMATION CARD
+========================================================= */
+
+.info-card {
+
+    width: 100%;
+
+    min-height: 135px;
+
+    padding: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    background: #121720;
+
+    border: 1px solid #293444;
+
+    border-radius: 13px;
+
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #426da9;
+
+    background: #151b24;
+}
+
+
+/* =========================================================
+   INFO ICON
+========================================================= */
+
+.info-icon {
+
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #101e3e;
+
+    border-radius: 11px;
+
+    color: #4388ff;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   INFO CONTENT
+========================================================= */
+
+.info-content {
+
+    min-width: 0;
+}
+
+.info-title {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #8490a3;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.info-content h3 {
+
+    margin-bottom: 6px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+.info-content p {
+
+    color: #8490a2;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   BOOKING CARD
+========================================================= */
+
+.booking-card {
+
+    width: 100%;
+
+    min-height: 190px;
+
+    padding: 30px;
+
+    margin-top: 4px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0e1930,
+            #0c1425
+        );
+
+    border: 1px solid #2050a0;
+
+    border-radius: 13px;
+}
+
+.booking-card h2 {
+
+    margin-bottom: 13px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    line-height: 1.3;
+}
+
+.booking-card p {
+
+    margin-bottom: 22px;
+
+    color: #8493aa;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   BOOKING BUTTON
+========================================================= */
+
+.booking-btn {
+
+    height: 50px;
+
+    padding: 0 22px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2864e8;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(40, 100, 232, 0.2);
+
+    transition: all 0.3s ease;
+}
+
+.booking-btn:hover {
+
+    background: #3475f5;
+
+    transform: translateY(-2px);
+}
+
+.booking-btn span {
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.contact-form-card {
+
+    width: 100%;
+
+    min-height: 650px;
+
+    padding: 42px;
+
+    background: #121720;
+
+    border: 1px solid #293444;
+
+    border-radius: 14px;
+}
+
+
+/* =========================================================
+   FORM HEADING
+========================================================= */
+
+.form-heading {
+
+    margin-bottom: 30px;
+}
+
+.form-heading h2 {
+
+    margin-bottom: 8px;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    line-height: 1.2;
+}
+
+.form-heading p {
+
+    color: #8493a8;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+
+    width: 100%;
+
+    margin-bottom: 22px;
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #f0f2f5;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.form-group label span {
+
+    color: #ff7777;
+}
+
+
+/* =========================================================
+   ENQUIRY BUTTONS
+========================================================= */
+
+.enquiry-buttons {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.enquiry-buttons button {
+
+    min-height: 38px;
+
+    padding: 0 15px;
+
+    border: 1px solid #29364a;
+
+    border-radius: 7px;
+
+    background: #1a2130;
+
+    color: #91a0b7;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.enquiry-buttons button:hover {
+
+    border-color: #4388ff;
+
+    color: #ffffff;
+}
+
+.enquiry-buttons button.active {
+
+    background: #2864e8;
+
+    border-color: #2864e8;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   FORM ROW
+========================================================= */
+
+.form-row {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.form-group input {
+
+    width: 100%;
+
+    height: 55px;
+
+    padding: 0 17px;
+
+    outline: none;
+
+    border: 1px solid #29364a;
+
+    border-radius: 9px;
+
+    background: #1a2130;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    transition: all 0.25s ease;
+}
+
+.form-group input::placeholder {
+
+    color: #75839a;
+}
+
+.form-group input:focus {
+
+    border-color: #4388ff;
+
+    background: #1c2535;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.form-group textarea {
+
+    width: 100%;
+
+    min-height: 125px;
+
+    padding: 17px;
+
+    resize: vertical;
+
+    outline: none;
+
+    border: 1px solid #29364a;
+
+    border-radius: 9px;
+
+    background: #1a2130;
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    transition: all 0.25s ease;
+}
+
+.form-group textarea::placeholder {
+
+    color: #75839a;
+}
+
+.form-group textarea:focus {
+
+    border-color: #4388ff;
+
+    background: #1c2535;
+}
+
+
+/* =========================================================
+   SEND BUTTON
+========================================================= */
+
+.send-btn {
+
+    width: 100%;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2864e8;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(40, 100, 232, 0.18);
+
+    transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+
+    background: #3475f5;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 35px rgba(40, 100, 232, 0.28);
+}
+
+.send-btn span {
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+
+    .contact-section {
+
+        padding-left: 6vw;
+        padding-right: 6vw;
+
+        padding-top: 120px;
+    }
+
+    .contact-hero {
+
+        margin-bottom: 95px;
+    }
+
+    .contact-hero h1 {
+
+        font-size: 105px;
+    }
+
+    .contact-hero > p {
+
+        max-width: 1100px;
+
+        font-size: 25px;
+    }
+
+    .contact-layout {
+
+        grid-template-columns: 0.8fr 1.2fr;
+
+        gap: 50px;
+    }
+
+    .info-card {
+
+        min-height: 150px;
+
+        padding: 32px;
+    }
+
+    .info-icon {
+
+        width: 62px;
+        height: 62px;
+
+        font-size: 22px;
+    }
+
+    .contact-form-card {
+
+        min-height: 700px;
+
+        padding: 50px;
+    }
+
+    .form-heading h2 {
+
+        font-size: 32px;
+    }
+
+    .form-group input {
+
+        height: 60px;
+    }
+
+    .form-group textarea {
+
+        min-height: 150px;
+    }
+
+    .send-btn {
+
+        height: 62px;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .contact-section {
+
+        padding: 80px 40px 100px;
+    }
+
+    .contact-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .contact-left {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .booking-card {
+
+        grid-column: span 2;
+    }
+
+    .contact-form-card {
+
+        min-height: auto;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .contact-section {
+
+        padding: 70px 30px 80px;
+    }
+
+    .contact-hero h1 {
+
+        font-size: 58px;
+
+        letter-spacing: -2px;
+    }
+
+    .contact-hero > p {
+
+        font-size: 17px;
+    }
+
+    .contact-left {
+
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    .booking-card {
+
+        margin-top: 0;
+    }
+
+    .contact-form-card {
+
+        padding: 32px;
+    }
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .contact-section {
+
+        padding: 55px 18px 70px;
+    }
+
+    .contact-hero {
+
+        margin-bottom: 55px;
+    }
+
+    .contact-badge {
+
+        padding: 8px 14px;
+
+        font-size: 11px;
+    }
+
+    .contact-hero h1 {
+
+        font-size: 45px;
+
+        letter-spacing: -1.5px;
+
+        margin-bottom: 22px;
+    }
+
+    .contact-hero > p {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .info-card {
+
+        min-height: 105px;
+
+        padding: 20px;
+
+        gap: 15px;
+    }
+
+    .info-icon {
+
+        width: 43px;
+
+        height: 43px;
+
+        font-size: 16px;
+    }
+
+    .info-title {
+
+        font-size: 9px;
+    }
+
+    .info-content h3 {
+
+        font-size: 15px;
+    }
+
+    .info-content p {
+
+        font-size: 11px;
+    }
+
+    .booking-card {
+
+        min-height: auto;
+
+        padding: 25px;
+    }
+
+    .booking-card h2 {
+
+        font-size: 18px;
+    }
+
+    .contact-form-card {
+
+        padding: 23px;
+
+        border-radius: 11px;
+    }
+
+    .form-heading h2 {
+
+        font-size: 23px;
+    }
+
+    .form-heading p {
+
+        font-size: 12px;
+    }
+
+    .enquiry-buttons button {
+
+        font-size: 10px;
+
+        padding: 0 11px;
+    }
+
+    .form-group input {
+
+        height: 50px;
+    }
+
+    .form-group textarea {
+
+        min-height: 120px;
+    }
+
+    .send-btn {
+
+        height: 52px;
+
+        font-size: 13px;
+    }
+}

@@ -28,13 +28,13 @@ function Sidebar() {
                         <span>YAGNIK</span>
                     </div>
 
-                    <a href="#home" o>Home</a>
-                    <a href="#services" >Services</a>
+                    <a href="/" o>Home</a>
+                    <a href="/Services" >Services</a>
                     <a href="/booking" >Booking</a>
-                    <a href="#about">About</a>
-                    <a href="#contact" >Contact</a>
+                    <a href="/About">About</a>
+                    <a href="/Contact" >Contact</a>
 
-                    <a href="#booking" class="mobile-book-btn" >
+                    <a href="/booking" class="mobile-book-btn" >
                         Book Now
                     </a>
 

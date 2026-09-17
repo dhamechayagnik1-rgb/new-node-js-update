@@ -25,13 +25,13 @@ function Navbar() {
 
                 <div class="nav-links">
 
-                    <a href="#home">Home</a>
-                    <a href="#services">Services</a>
+                    <a href="/">Home</a>
+                    <a href="/Services">Services</a>
                     <a href="/booking">Booking</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
+                    <a href="/About">About</a>
+                    <a href="/Contact">Contact</a>
 
-                    <a href="#booking" class="book-btn">
+                    <a href="/booking" class="book-btn">
                         Book Now
                     </a>
 
