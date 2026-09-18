@@ -36,12 +36,12 @@ function Home() {
            
             <div class="hero-buttons">
 
-                <a href="#software" class="btn software-btn">
+                <a href="/booking" class="btn software-btn">
                     <span class="btn-icon">&lt;/&gt;</span>
                     Book Software Consult
                 </a>
 
-                <a href="#taxation" class="btn taxation-btn">
+                <a href="/booking" class="btn taxation-btn">
                     <span class="btn-icon">▣</span>
                     Book Tax Advisory
                 </a>

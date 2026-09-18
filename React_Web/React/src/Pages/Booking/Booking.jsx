@@ -27,7 +27,7 @@ function Booking() {
 
                     <div class="cta-actions">
 
-                        <a href="#" class="cta-btn software-cta">
+                        <a href="/booking" class="cta-btn software-cta">
 
                             <span>
                                 &lt;/&gt;
@@ -42,7 +42,7 @@ function Booking() {
                         </a>
 
 
-                        <a href="#" class="cta-btn tax-cta">
+                        <a href="/booking" class="cta-btn tax-cta">
 
                             <span>
                                 ▣

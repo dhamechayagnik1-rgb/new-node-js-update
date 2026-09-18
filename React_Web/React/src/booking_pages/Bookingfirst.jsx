@@ -13,15 +13,11 @@ function FirstBookingPage(props) {
     const [Active1, setActive1] = useState(false)
     const [Active2, setActive2] = useState(false)
     const [Active3, setActive3] = useState(false)
-    const value = useContext(DisplayContext)
-    const side  = useContext(SidebarContext)
+    const {slide,setSlide}= useContext(DisplayContext)
+  
     
-     const changebutton1 = () => {
-        console.log(value);
-        
-        value.setButton1(!value.button1)
-       
-    }
+    
+     
 
     const changeActive1 = () => {
         setActive1(!Active1)
@@ -199,7 +195,7 @@ function FirstBookingPage(props) {
 
 
 
-            <button class="continue-btn" onClick={()=> changebutton1()}>
+            <button class="continue-btn" onClick={()=> setSlide(1)}>
                 Continue to Date &amp; Time
             </button>
 

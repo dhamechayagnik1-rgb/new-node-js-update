@@ -63,7 +63,7 @@ function Services() {
                 </div>
 
 
-                <a href="#" class="service-btn software-btn">
+                <a href="/booking" class="service-btn software-btn">
                     Book Software Consult
                     <span>→</span>
                 </a>
@@ -118,7 +118,7 @@ function Services() {
                 </div>
 
 
-                <a href="#" class="service-btn taxation-btn">
+                <a href="/booking" class="service-btn taxation-btn">
                     Book Tax Advisory
                     <span>→</span>
                 </a>

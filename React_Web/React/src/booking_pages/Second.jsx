@@ -1,7 +1,11 @@
 import React from 'react'
 import './econd.css'
+import { DisplayContext } from '../context'
+import ThirdBooking from './ThirdBooking';
+
 
 export default class Secondpage extends React.Component {
+     static contextType = DisplayContext; 
     constructor() {
         super()
         this.state = {
@@ -101,6 +105,9 @@ handleToggleTime = (selectedTime) => {
 
 
     render() {
+
+        const { button1,setButton1} = this.context
+        const { slide, setSlide} = this.context
         
         
         const { date,Time, } = this.state
@@ -138,11 +145,11 @@ handleToggleTime = (selectedTime) => {
 
                     <div class="booking-actions">
 
-                        <button class="back-btn">
+                        <button class="back-btn" onClick ={() => setSlide(0)}>
                             Back
                         </button>
 
-                        <button class="continue-btn">
+                        <button class="continue-btn" onClick={() => setSlide(2)}>
                             Continue to Details
                         </button>
 

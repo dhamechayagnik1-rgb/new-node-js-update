@@ -6,14 +6,35 @@ import './bookingp.css'
 import { DisplayContext } from '../context'
 
 import Secondpage from './Second'
+import ThirdBooking from './ThirdBooking'
 
 
 
 function MainBookingp(props) {
     const [button1, setButton1] = useState(false)
+    const [slide, setSlide] = useState(0)
 
 
+    const changename = (chan) => {
+        switch (chan) {
+            case 1:
+                setSlide(1)
+                break;
+            
+            case 2:
+                setSlide(2)
+                break;
 
+            case 3:
+                setSlide(3)
+                break;
+
+
+        
+            default:
+                break;
+        }
+    }
 
     return (
         <>
@@ -43,28 +64,30 @@ function MainBookingp(props) {
 
                     <div class="steps">
 
-                        <div class={button1?"step":"step active"}>
+                        <div class={slide == 0?"step active":"step"}>
                             <span class="step-number">1</span>
                             <strong>Service</strong>
                         </div>
 
                         <span class="step-arrow">›</span>
 
-                        <div class={button1?"step active":"step"}>
+                        <div class={slide == 1?"step active":"step"}>
                             <span class="step-number">2</span>
                             <span>Date &amp; Time</span>
                         </div>
 
                         <span class="step-arrow">›</span>
 
-                        <div class="step">
+                        <div class={slide == 2?"step active":"step"}>
                             <span class="step-number">3</span>
                             <span>Your Details</span>
                         </div>
 
                     </div>
-                    <DisplayContext.Provider value={{button1, setButton1}}>
-                    {button1? <Secondpage/>:<FirstBookingPage/>}
+                    <DisplayContext.Provider value={{button1, setButton1,slide,setSlide}} >
+                    {slide == 1? <Secondpage/>:slide == 0?<FirstBookingPage/>: slide == 2?<ThirdBooking/>:null}
+
+                    
                     </DisplayContext.Provider>
 
                    
