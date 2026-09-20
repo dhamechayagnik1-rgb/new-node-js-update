@@ -1,0 +1,192 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+}
+
+
+/* Main Container */
+
+.admin-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+
+/* Header */
+
+.admin-header {
+    margin-bottom: 30px;
+}
+
+.admin-header h1 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.admin-header p {
+    color: #777;
+    font-size: 16px;
+}
+
+
+/* Contact List */
+
+.contact-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* Contact Card */
+
+.contact-card {
+    width: 100%;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Contact Information */
+
+.contact-info {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+
+/* Individual Info */
+
+.info-box span {
+    display: block;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #888;
+
+    margin-bottom: 7px;
+}
+
+.info-box h3 {
+    font-size: 17px;
+    color: #222;
+}
+
+.info-box p {
+    font-size: 15px;
+    color: #444;
+
+    word-break: break-word;
+}
+
+
+/* Content */
+
+.content-box {
+    grid-column: span 4;
+}
+
+.content-box p {
+    background: #f7f7f7;
+
+    padding: 12px 15px;
+
+    border-radius: 7px;
+
+    line-height: 1.5;
+}
+
+
+/* Remove Button */
+
+.remove-btn {
+    border: none;
+
+    background: #e53935;
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.remove-btn:hover {
+    background: #c62828;
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .admin-container {
+        padding: 25px;
+    }
+
+    .contact-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-box {
+        grid-column: span 2;
+    }
+
+    .remove-btn {
+        width: 100%;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 550px) {
+
+    .admin-container {
+        padding: 15px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .content-box {
+        grid-column: span 1;
+    }
+
+    .admin-header h1 {
+        font-size: 26px;
+    }
+}

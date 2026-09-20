@@ -5,40 +5,55 @@ import FirstBookingPage from './Bookingfirst'
 import './bookingp.css'
 import { DisplayContext } from '../context'
 
-import Secondpage from './Second'
+
 import ThirdBooking from './ThirdBooking'
+import { date, Time } from './day'
 
 
 
 function MainBookingp(props) {
-    const [button1, setButton1] = useState(false)
+
     const [slide, setSlide] = useState(0)
+    const [active, setActive] = useState(0)
+    const [formData, setformData] = useState({ name: "", mobile: "", email: "", company: "", content: "" })
+    const [blogs, setBlogs] = useState([]);
+    const [Text, setText] = useState("")
+    const isAdmin = window.location.pathname === "/admin";
 
 
-    const changename = (chan) => {
-        switch (chan) {
-            case 1:
-                setSlide(1)
-                break;
-            
-            case 2:
-                setSlide(2)
-                break;
+    function handleSubmit(e) {
+        console.log(active);
 
-            case 3:
-                setSlide(3)
-                break;
+        let text
 
-
-        
-            default:
-                break;
+        if (active === 1) {
+            text = "Software Development"
+        } else {
+            text = "Taxation Advisory"
         }
+        setText(text)
+
+        e.preventDefault();
+
+        setBlogs([{
+            name: formData.name, mobile: formData.mobile
+            , email: formData.email, company: formData.company
+            , content: formData.content
+        }, ...blogs]);
+        console.log(blogs);
+        setformData({ text: "", name: "", mobile: "", email: "", company: "", content: "" });
+
     }
 
+
+
+
+
     return (
+
+
         <>
-      
+
 
             <section class="booking-page">
 
@@ -64,33 +79,30 @@ function MainBookingp(props) {
 
                     <div class="steps">
 
-                        <div class={slide == 0?"step active":"step"}>
+                        <div class={slide == 0 ? "step active" : "step"}>
                             <span class="step-number">1</span>
                             <strong>Service</strong>
                         </div>
 
                         <span class="step-arrow">›</span>
 
-                        <div class={slide == 1?"step active":"step"}>
+                        <div class={slide == 1 ? "step active" : "step"}>
                             <span class="step-number">2</span>
                             <span>Date &amp; Time</span>
                         </div>
 
-                        <span class="step-arrow">›</span>
 
-                        <div class={slide == 2?"step active":"step"}>
-                            <span class="step-number">3</span>
-                            <span>Your Details</span>
-                        </div>
 
                     </div>
-                    <DisplayContext.Provider value={{button1, setButton1,slide,setSlide}} >
-                    {slide == 1? <Secondpage/>:slide == 0?<FirstBookingPage/>: slide == 2?<ThirdBooking/>:null}
+                    <DisplayContext.Provider value={{ handleSubmit, slide, setSlide, active, setActive, formData, setformData, blogs, setBlogs }} >
+                        {slide == 1 ? <ThirdBooking /> : slide == 0 ? <FirstBookingPage /> : null}
+                        {isAdmin ? (
+                            <Admin />
+                        ) :null}
 
-                    
                     </DisplayContext.Provider>
 
-                   
+
 
 
                 </div>

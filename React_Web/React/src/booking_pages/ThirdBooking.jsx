@@ -7,7 +7,7 @@ import { DisplayContext } from '../context'
 
 function ThirdBooking() {
 
-    const {slide,setSlide} = useContext(DisplayContext)
+    const {slide,setSlide,setActive,active, formData, setformData,blogs, setBlogs,handleSubmit} = useContext(DisplayContext)
 
     return (
 
@@ -24,23 +24,10 @@ function ThirdBooking() {
 
                         <div class="summary-item">
                             <span>Service:</span>
-                            <strong>Software Development</strong>
+                            <strong>{active == 1?"Software Development":"Taxation Advisory"}</strong>
                         </div>
 
-                        <div class="summary-item">
-                            <span>Session:</span>
-                            <strong>60-min Project Scoping</strong>
-                        </div>
-
-                        <div class="summary-item">
-                            <span>Date:</span>
-                            <strong>Tuesday, 22 September</strong>
-                        </div>
-
-                        <div class="summary-item">
-                            <span>Time:</span>
-                            <strong>10:00 AM</strong>
-                        </div>
+                       
 
                     </div>
 
@@ -51,7 +38,7 @@ function ThirdBooking() {
                 <h2 class="details-title">Your Details</h2>
 
 
-                <form>
+                <form onSubmit={handleSubmit}>
 
                     <div class="form-grid">
 
@@ -63,7 +50,16 @@ function ThirdBooking() {
 
                             <input
                                 type="text"
+                                
                                 id="fullname"
+                                value={formData.name}
+                                onChange = {(e) => setformData({
+                                    name: e.target.value, 
+                                    mobile:formData.mobile,
+                                    email:formData.email,
+                                    company:formData.company,
+                                    content:formData.content
+                                })}
                                 placeholder="Full name"
                             />
                         </div>
@@ -79,6 +75,14 @@ function ThirdBooking() {
                                 type="email"
                                 id="email"
                                 placeholder="Email address"
+                                value={formData.email}
+                                onChange = {(e) => setformData({
+                                    name: formData.name, 
+                                    mobile:formData.mobile,
+                                    email:e.target.value,
+                                    company:formData.company,
+                                    content:formData.content
+                                })}
                             />
                         </div>
 
@@ -93,6 +97,14 @@ function ThirdBooking() {
                                 type="tel"
                                 id="phone"
                                 placeholder="Phone number"
+                                value={formData.mobile}
+                                onChange = {(e) => setformData({
+                                    name: formData.name, 
+                                    mobile:e.target.value,
+                                    email:formData.email,
+                                    company:formData.company,
+                                    content:formData.content
+                                })}
                             />
                         </div>
 
@@ -106,6 +118,14 @@ function ThirdBooking() {
                             <input
                                 type="text"
                                 id="company"
+                                value={formData.company}
+                                onChange = {(e) => setformData({
+                                    name: formData.name, 
+                                    mobile:formData.mobile,
+                                    email:formData.email,
+                                    company:e.target.value,
+                                    content:formData.content
+                                })}
                                 placeholder="Company name (optional)"
                             />
                         </div>
@@ -120,6 +140,14 @@ function ThirdBooking() {
 
                             <textarea
                                 id="message"
+                                value={formData.content}
+                                onChange = {(e) => setformData({
+                                    name: formData.name, 
+                                    mobile:formData.mobile,
+                                    email:formData.email,
+                                    company:formData.company,
+                                    content:e.target.value
+                                })}
                                 placeholder="Briefly describe what you need help with..."
                             ></textarea>
 
@@ -131,7 +159,7 @@ function ThirdBooking() {
 
                     <div class="button-section">
 
-                        <button type="button" class="back-btn" onClick={() => setSlide(1)}>
+                        <button type="button" class="back-btn" onClick={() => setSlide(0)}>
                             Back
                         </button>
 

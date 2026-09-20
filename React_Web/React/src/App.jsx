@@ -1,6 +1,6 @@
 
 
-import { Component } from 'react'
+import { Component, useState } from 'react'
 import React from 'react'
 import './App.css'
 import MainBookingp from './booking_pages/MainBookingp'
@@ -14,14 +14,20 @@ import Why from './Pages/Why/Why'
 import Main from './Pages/Main';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
+import Admin from './adminpanel/admin';
+import { DisplayContext } from './context';
 
 function App() {
+
+  const [blog, setBlog] = useState([])
+
   const router = createBrowserRouter([
     { path: "/", element: <><Main /></> },
     { path: "/booking", element: <MainBookingp /> },
-    { path: "/About", element: <About/> },
-    { path: "/Services", element: <Services/> },
-    { path: "/Contact", element: <Contact/> },
+    { path: "/About", element: <About /> },
+    { path: "/Services", element: <Services /> },
+    { path: "/Contact", element: <Contact /> },
+    { path: "/admin", element: <Admin /> },
   ]);
 
 
@@ -29,9 +35,11 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <RouterProvider router={router} />
-      <Footer />
+      <DisplayContext.Provider value ={{blog,setBlog}}>
+        <Navbar />
+        <RouterProvider router={router} />
+        <Footer />
+      </DisplayContext.Provider>
 
     </>
   )

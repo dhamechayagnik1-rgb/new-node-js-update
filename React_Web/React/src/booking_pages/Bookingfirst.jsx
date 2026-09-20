@@ -8,45 +8,18 @@ import { DisplayContext, SidebarContext } from '../context'
 function FirstBookingPage(props) {
 
 
-    const [change, setChange] = useState(false)
-    const [changen, setChangen] = useState(false)
-    const [Active1, setActive1] = useState(false)
-    const [Active2, setActive2] = useState(false)
-    const [Active3, setActive3] = useState(false)
-    const {slide,setSlide}= useContext(DisplayContext)
-  
-    
-    
-     
-
-    const changeActive1 = () => {
-        setActive1(!Active1)
-        setActive2(false)
-        setActive3(false)
-    }
-    const changeActive2 = () => {
-        setActive1(false)
-        setActive2(!Active2)
-        setActive3(false)
-    }
-    const changeActive3 = () => {
-        setActive1(false)
-        setActive2(false)
-        setActive3(!Active3)
-    }
+   
+    const { slide, setSlide,active,setActive } = useContext(DisplayContext)
 
 
 
 
-    const changetoggle = () => {
-        setChange(!change);
-        setChangen(false);
-    };
 
-    const newtoggle = () => {
-        setChangen(!changen);
-        setChange(false);
-    };
+
+
+
+
+
 
 
     return (
@@ -62,7 +35,11 @@ function FirstBookingPage(props) {
                 <div class="service-cards">
 
 
-                    <div class={change ? "booking-card selected" : "booking-card"} onClick={() => changetoggle()}>
+                    <div class={active == 1 ? "booking-card selected" : "booking-card"} onClick={() => {
+                        if (active == 0 || active == 2) {
+                            setActive(1);
+                        }
+                    }}>
 
                         <div class="card-top">
 
@@ -72,7 +49,7 @@ function FirstBookingPage(props) {
                             </div>
 
 
-                            <div class={change ? "check" : "checkenable"}>
+                            <div class={active ==1 ? "check" : "checkenable"}>
                                 ✓
                             </div>
 
@@ -112,7 +89,11 @@ function FirstBookingPage(props) {
 
 
 
-                    <div class={changen ? "booking-card selected" : "booking-card"} onClick={() => newtoggle()}>
+                    <div class={active == 2 ? "booking-card selected" : "booking-card"} onClick={() => {
+                        if (active == 0 || active == 1) {
+                            setActive(2);
+                        }
+                    }}>
 
                         <div class="card-top">
 
@@ -121,7 +102,7 @@ function FirstBookingPage(props) {
                                 Taxation Division
                             </div>
 
-                            <div class={changen ? "check" : "checkenable"}>
+                            <div class={active == 2 ? "check" : "checkenable"}>
                                 ✓
                             </div>
 
@@ -168,35 +149,13 @@ function FirstBookingPage(props) {
 
 
 
-            <div class="session-section">
-
-                <h3>
-                    Session type
-                </h3>
-
-                <div class="session-options">
-
-                    <button class={Active1 ? "session-btn active" : "session-btn"} onClick={() => changeActive1()}>
-                        30-min Discovery Call
-                    </button>
-
-                    <button class={Active2 ? "session-btn active" : "session-btn"} onClick={() => changeActive2()}>
-                        60-min Project Scoping
-                    </button>
-
-                    <button class={Active3 ? "session-btn active" : "session-btn"} onClick={() => changeActive3()}>
-                        90-min Technical Deep Dive
-                    </button>
-
-                </div>
-
-            </div>
+            
 
 
 
 
-            <button class="continue-btn" onClick={()=> setSlide(1)}>
-                Continue to Date &amp; Time
+            <button class="continue-btn" onClick={() => setSlide(1)}>
+                Continue 
             </button>
 
 

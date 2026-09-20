@@ -1,4 +1,5 @@
 import {createContext}  from "react"
 
-export const DisplayContext = createContext();
+export const DisplayContext = createContext(null);
 export const SidebarContext = createContext();
+
