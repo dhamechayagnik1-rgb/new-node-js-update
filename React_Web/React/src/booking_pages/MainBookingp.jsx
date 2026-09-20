@@ -8,6 +8,7 @@ import { DisplayContext } from '../context'
 
 import ThirdBooking from './ThirdBooking'
 import { date, Time } from './day'
+import Admin from '../adminpanel/admin'
 
 
 
@@ -22,17 +23,7 @@ function MainBookingp(props) {
 
 
     function handleSubmit(e) {
-        console.log(active);
-
-        let text
-
-        if (active === 1) {
-            text = "Software Development"
-        } else {
-            text = "Taxation Advisory"
-        }
-        setText(text)
-
+        
         e.preventDefault();
 
         setBlogs([{
@@ -95,7 +86,7 @@ function MainBookingp(props) {
 
                     </div>
                     <DisplayContext.Provider value={{ handleSubmit, slide, setSlide, active, setActive, formData, setformData, blogs, setBlogs }} >
-                        {slide == 1 ? <ThirdBooking /> : slide == 0 ? <FirstBookingPage /> : null}
+                        {slide == 1 ? <ThirdBooking /> : slide == 0 ? <FirstBookingPage /> :null}
                         {isAdmin ? (
                             <Admin />
                         ) :null}

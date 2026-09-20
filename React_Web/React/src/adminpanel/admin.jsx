@@ -2,8 +2,9 @@ import { useContext } from 'react'
 import './admin.css'
 import { DisplayContext } from '../context'
 function Admin() {
-    const {blogs, setBlogs} = useContext(DisplayContext)
+    const {blogs, setBlogs,slide} = useContext(DisplayContext)
 
+    console.log(slide);
     console.log(blogs);
     
 
@@ -183,7 +184,7 @@ function Admin() {
                 </div>
 
             </div>
-            ```
+            
 
 
         </>
