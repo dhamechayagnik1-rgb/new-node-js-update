@@ -1,3 +1,6 @@
+/* ================================
+   ADMIN PAGE
+================================ */
 
 * {
     margin: 0;
@@ -7,130 +10,214 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f5f6fa;
+    background: #f3f5f9;
+    color: #222;
 }
 
 
-/* Main Container */
+/* ================================
+   MAIN CONTAINER
+================================ */
 
 .admin-container {
     width: 100%;
     min-height: 100vh;
-    padding: 40px;
+    padding: 45px 55px;
 }
 
 
-/* Header */
+/* ================================
+   HEADER
+================================ */
 
 .admin-header {
+    width: 100%;
+    background: #ffffff;
+    padding: 28px 32px;
+    border-radius: 16px;
     margin-bottom: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid #e8eaf0;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
 }
 
 .admin-header h1 {
-    font-size: 32px;
-    color: #222;
-    margin-bottom: 8px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #18181b;
+    margin-bottom: 7px;
 }
 
 .admin-header p {
     color: #777;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 
-/* Contact List */
+/* ================================
+   CONTACT LIST
+================================ */
 
 .contact-list {
     width: 100%;
+
     display: flex;
     flex-direction: column;
+
     gap: 20px;
 }
 
 
-/* Contact Card */
+/* ================================
+   CONTACT CARD - COMPACT
+================================ */
 
 .contact-card {
     width: 100%;
-    background: white;
-    padding: 25px;
+    background: #ffffff;
+
+    padding: 18px 22px;
+
     border-radius: 12px;
 
     display: flex;
     align-items: center;
-    gap: 30px;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    gap: 25px;
+
+    border: 1px solid #e7e9ef;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    transition: 0.25s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
 }
 
 
-/* Contact Information */
+/* Information */
 
 .contact-info {
     flex: 1;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
+
+    grid-template-columns:
+        1fr
+        1.5fr
+        1fr
+        1.3fr;
+
+    gap: 25px;
 }
 
 
-/* Individual Info */
+/* Individual */
+
+.info-box {
+    min-width: 0;
+}
 
 .info-box span {
     display: block;
 
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 11px;
 
-    color: #888;
+    font-weight: 700;
 
-    margin-bottom: 7px;
+    color: #8b9099;
+
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+
+    letter-spacing: 0.5px;
 }
 
 .info-box h3 {
-    font-size: 17px;
+    font-size: 15px;
+
+    font-weight: 600;
+
     color: #222;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
 }
 
 .info-box p {
-    font-size: 15px;
+    font-size: 14px;
+
     color: #444;
 
-    word-break: break-word;
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
 }
 
 
 /* Content */
 
 .content-box {
-    grid-column: span 4;
+    grid-column: 1 / -1;
+
+    border-top: 1px solid #eeeeee;
+
+    padding-top: 12px;
 }
 
 .content-box p {
-    background: #f7f7f7;
+    background: #f7f8fb;
 
-    padding: 12px 15px;
-
-    border-radius: 7px;
-
-    line-height: 1.5;
-}
-
-
-/* Remove Button */
-
-.remove-btn {
-    border: none;
-
-    background: #e53935;
-    color: white;
-
-    padding: 12px 22px;
+    padding: 10px 14px;
 
     border-radius: 7px;
 
     font-size: 14px;
+
+    line-height: 1.4;
+
+    color: #4b4f56;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* Remove */
+
+.remove-btn {
+    flex-shrink: 0;
+
+    border: none;
+
+    background: #fff0f0;
+
+    color: #e53935;
+
+    padding: 10px 17px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
     font-weight: 600;
 
     cursor: pointer;
@@ -139,20 +226,21 @@ body {
 }
 
 .remove-btn:hover {
-    background: #c62828;
+    background: #e53935;
+
+    color: white;
 }
 
 
-/* Tablet */
+/* ================================
+   TABLET
+================================ */
 
 @media (max-width: 900px) {
 
-    .admin-container {
-        padding: 25px;
-    }
-
     .contact-card {
         flex-direction: column;
+
         align-items: stretch;
     }
 
@@ -170,12 +258,14 @@ body {
 }
 
 
-/* Mobile */
+/* ================================
+   MOBILE
+================================ */
 
 @media (max-width: 550px) {
 
-    .admin-container {
-        padding: 15px;
+    .contact-card {
+        padding: 16px;
     }
 
     .contact-info {
@@ -184,9 +274,5 @@ body {
 
     .content-box {
         grid-column: span 1;
-    }
-
-    .admin-header h1 {
-        font-size: 26px;
     }
 }

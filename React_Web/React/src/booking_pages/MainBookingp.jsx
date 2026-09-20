@@ -9,6 +9,9 @@ import { DisplayContext } from '../context'
 import ThirdBooking from './ThirdBooking'
 import { date, Time } from './day'
 import Admin from '../adminpanel/admin'
+import { db } from '../firebaseinit'
+import { collection, addDoc } from "firebase/firestore";
+
 
 
 
@@ -22,8 +25,8 @@ function MainBookingp(props) {
     const isAdmin = window.location.pathname === "/admin";
 
 
-    function handleSubmit(e) {
-        
+    async function handleSubmit(e) {
+
         e.preventDefault();
 
         setBlogs([{
@@ -31,6 +34,16 @@ function MainBookingp(props) {
             , email: formData.email, company: formData.company
             , content: formData.content
         }, ...blogs]);
+        // Add a new document with a generated id.
+        const docRef = await addDoc(collection(db, "blogs"), {
+            name: formData.name, 
+            mobile: formData.mobile
+            , email: formData.email,
+             company: formData.company
+            , content: formData.content,
+            createdon: new Date()
+        });
+        //console.log("Document written with ID: ", docRef.id);
         console.log(blogs);
         setformData({ text: "", name: "", mobile: "", email: "", company: "", content: "" });
 
@@ -86,10 +99,10 @@ function MainBookingp(props) {
 
                     </div>
                     <DisplayContext.Provider value={{ handleSubmit, slide, setSlide, active, setActive, formData, setformData, blogs, setBlogs }} >
-                        {slide == 1 ? <ThirdBooking /> : slide == 0 ? <FirstBookingPage /> :null}
+                        {slide == 1 ? <ThirdBooking /> : slide == 0 ? <FirstBookingPage /> : null}
                         {isAdmin ? (
                             <Admin />
-                        ) :null}
+                        ) : null}
 
                     </DisplayContext.Provider>
 
