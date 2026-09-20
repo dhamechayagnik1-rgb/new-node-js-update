@@ -4,7 +4,8 @@ import { DisplayContext } from '../context'
 function Admin() {
     const {blogs, setBlogs} = useContext(DisplayContext)
 
-
+    console.log(blogs);
+    
 
     return (
         <>
