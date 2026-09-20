@@ -1,0 +1,627 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #111111;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 238px;
+    min-height: 100vh;
+
+    border-right: 1px solid #e5e5e5;
+
+    background: #ffffff;
+
+    padding: 22px 16px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    padding: 0 12px;
+    margin-bottom: 22px;
+}
+
+.logo i {
+    font-size: 24px;
+    color: #174d91;
+}
+
+
+/* MENU */
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.menu-item {
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 0 14px;
+
+    border-radius: 13px;
+
+    color: #333333;
+
+    font-size: 18px;
+
+    transition: 0.2s;
+}
+
+
+.menu-item i {
+    width: 20px;
+    font-size: 19px;
+}
+
+
+.menu-item:hover {
+    background: #eef5ff;
+    color: #164f91;
+}
+
+
+.menu-item.active {
+    background: #cfe3ff;
+    color: #145099;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.topbar {
+    height: 72px;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+}
+
+
+/* SEARCH */
+
+.search-box {
+    width: 325px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    background: #fafafa;
+
+    border-radius: 18px;
+
+    padding: 0 17px;
+}
+
+
+.search-box i {
+    color: #777;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 16px;
+}
+
+
+.search-box input::placeholder {
+    color: #777;
+}
+
+
+/* ADMIN */
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 16px;
+}
+
+
+.notification {
+    font-size: 21px;
+    margin-right: 10px;
+}
+
+
+.admin-avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #cfe3ff;
+
+    color: #175297;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard {
+    padding: 26px 25px;
+}
+
+
+/* PAGE TITLE */
+
+.page-title {
+    margin-bottom: 18px;
+}
+
+
+.page-title h1 {
+    font-size: 27px;
+    font-weight: 500;
+
+    margin-bottom: 3px;
+}
+
+
+.page-title p {
+    font-size: 17px;
+    color: #333;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-bottom: 20px;
+}
+
+
+.stat-card {
+    min-height: 134px;
+
+    background: #fcfcfc;
+
+    border-radius: 14px;
+
+    padding: 25px 18px;
+}
+
+
+.stat-card p {
+    font-size: 16px;
+
+    color: #333;
+
+    margin-bottom: 7px;
+}
+
+
+.stat-card h2 {
+    font-size: 29px;
+
+    font-weight: 500;
+
+    margin-bottom: 9px;
+}
+
+
+.positive {
+    color: #008a16;
+    font-size: 14px;
+}
+
+
+.negative {
+    color: #c90000;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   BOTTOM GRID
+========================================= */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.42fr;
+
+    gap: 15px;
+}
+
+
+.dashboard-card {
+    border: 1px solid #dddddd;
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    min-height: 275px;
+
+    padding: 18px;
+}
+
+
+.dashboard-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   REVENUE CHART
+========================================= */
+
+.revenue-card {
+    overflow: hidden;
+}
+
+
+.chart {
+    height: 205px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 15px 0 0;
+}
+
+
+.bar-wrapper {
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex: 1;
+}
+
+
+.bar {
+    width: 30px;
+
+    max-width: 100%;
+
+    background: #c9def9;
+
+    border-radius: 6px 6px 3px 3px;
+}
+
+
+.bar-1 {
+    height: 73px;
+}
+
+.bar-2 {
+    height: 101px;
+}
+
+.bar-3 {
+    height: 80px;
+}
+
+.bar-4 {
+    height: 130px;
+}
+
+.bar-5 {
+    height: 162px;
+}
+
+.bar-6 {
+    height: 114px;
+}
+
+.bar-7 {
+    height: 94px;
+}
+
+
+.active-bar {
+    background: #1d5595;
+}
+
+
+.bar-wrapper span {
+    font-size: 13px;
+    color: #333;
+}
+
+
+/* =========================================
+   RECENT ORDERS
+========================================= */
+
+.card-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+
+.card-header a {
+    color: #0757a5;
+
+    font-size: 16px;
+}
+
+
+.table {
+    width: 100%;
+}
+
+
+.table-header,
+.table-row {
+    display: grid;
+
+    grid-template-columns:
+        0.75fr 1.2fr 0.8fr 1fr;
+
+    align-items: center;
+
+    column-gap: 10px;
+}
+
+
+.table-header {
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid #ddd;
+
+    color: #444;
+
+    font-size: 15px;
+}
+
+
+.table-row {
+    min-height: 44px;
+
+    border-bottom: 1px solid #ddd;
+
+    font-size: 16px;
+}
+
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+
+/* STATUS */
+
+.status {
+    display: inline-block;
+
+    padding: 4px 12px;
+
+    border-radius: 15px;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+.delivered {
+    background: #c8efc8;
+    color: #237423;
+}
+
+
+.pending {
+    background: #ffe0a8;
+    color: #8b5a00;
+}
+
+
+.shipped {
+    background: #cfe3ff;
+    color: #145099;
+}
+
+
+.cancelled {
+    background: #ffd0d0;
+    color: #a30000;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 70px;
+        padding: 20px 10px;
+    }
+
+    .logo span,
+    .menu-item span {
+        display: none;
+    }
+
+    .logo {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .menu-item {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .menu-item i {
+        margin: 0;
+    }
+
+    .topbar {
+        padding: 0 15px;
+    }
+
+    .search-box {
+        width: 200px;
+    }
+
+    .admin-profile > span {
+        display: none;
+    }
+
+    .dashboard {
+        padding: 20px 15px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .table {
+        overflow-x: auto;
+    }
+
+    .table-header,
+    .table-row {
+        min-width: 500px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .search-box {
+        width: 170px;
+    }
+
+    .topbar {
+        gap: 10px;
+    }
+
+}
