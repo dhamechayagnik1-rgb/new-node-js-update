@@ -17,6 +17,7 @@ import Contact from './Pages/Contact/Contact';
 import Admin from './adminpanel/admin';
 import { DisplayContext } from './context';
 import AdminMain from './adminpanel/adminmain';
+import Founder from './Pages/Founder/Founder';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
     { path: "/Services", element: <Services /> },
     { path: "/Contact", element: <Contact /> },
     { path: "/admin", element: <Admin /> },
+    {path:"/Founder",element: <Founder/>}
     
     
 

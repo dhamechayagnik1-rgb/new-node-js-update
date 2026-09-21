@@ -1,0 +1,435 @@
+* {
+    box-sizing: border-box;
+}
+
+.founder-page {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+}
+
+
+/* =================================
+   HERO
+================================= */
+
+.founder-hero {
+    min-height: 650px;
+    background: #101820;
+    color: white;
+
+    padding: 70px 7%;
+}
+
+.hero-content {
+    max-width: 1200px;
+    min-height: 510px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 400px 100px;
+    align-items: center;
+
+    gap: 40px;
+}
+
+
+/* HERO TEXT */
+
+.small-title {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #aab5c5;
+    margin-bottom: 25px;
+}
+
+.hero-text h1 {
+    font-size: 76px;
+    line-height: .9;
+    margin: 0 0 20px;
+    letter-spacing: -4px;
+}
+
+.hero-text h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 330px;
+
+    color: #aeb7c5;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.hero-btn {
+    margin-top: 25px;
+
+    padding: 13px 22px;
+
+    border: 1px solid white;
+    background: white;
+    color: #101820;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.hero-btn:hover {
+    background: transparent;
+    color: white;
+}
+
+
+/* HERO IMAGE */
+
+.hero-image {
+    height: 510px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    filter: grayscale(15%);
+}
+
+
+/* SIDE */
+
+.hero-side-text {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    font-size: 10px;
+    color: #8490a0;
+
+    letter-spacing: 1px;
+}
+
+.hero-side-text strong {
+    color: white;
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =================================
+   WHO SECTION
+================================= */
+
+.who-section {
+    background: #f5f2ea;
+
+    padding: 90px 7%;
+}
+
+.section-title {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title p {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #777;
+}
+
+.section-title h2 {
+    font-size: 55px;
+    margin: 15px 0 60px;
+
+    font-weight: 700;
+}
+
+.section-title h2 i {
+    font-family: Georgia, serif;
+    font-weight: normal;
+}
+
+
+.who-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid #bbb;
+}
+
+
+.who-item {
+    padding: 30px 25px;
+
+    border-right: 1px solid #bbb;
+}
+
+.who-item:last-child {
+    border-right: none;
+}
+
+.who-item span {
+    font-size: 11px;
+    color: #777;
+}
+
+.who-item h3 {
+    font-size: 17px;
+    margin: 25px 0 15px;
+}
+
+.who-item p {
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    max-width: 230px;
+}
+
+
+/* =================================
+   HOW I WORK
+================================= */
+
+.work-section {
+    background: #244c93;
+
+    color: white;
+
+    padding: 90px 7%;
+}
+
+
+.work-heading {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.work-heading p {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #b9c9e7;
+}
+
+.work-heading h2 {
+    font-size: 55px;
+    line-height: 1;
+
+    margin: 15px 0 55px;
+}
+
+.work-heading h2 i {
+    font-family: Georgia, serif;
+    font-weight: normal;
+}
+
+
+.work-cards {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.work-card {
+    min-height: 300px;
+
+    padding: 30px;
+
+    background: rgba(255,255,255,.08);
+
+    border: 1px solid rgba(255,255,255,.18);
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.work-card.active {
+    background: #101d42;
+
+    transform: translateY(-15px);
+}
+
+
+.card-number {
+    font-size: 12px;
+    color: #aebee0;
+}
+
+.work-card h3 {
+    margin-top: 40px;
+
+    font-size: 18px;
+}
+
+.work-card p {
+    color: #bdc9df;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    max-width: 220px;
+}
+
+.card-line {
+    margin-top: auto;
+
+    width: 100%;
+    height: 1px;
+
+    background: rgba(255,255,255,.2);
+
+    margin-bottom: 15px;
+}
+
+.work-card strong {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =================================
+   STORY
+================================= */
+
+.story-section {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 100px 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+}
+
+
+.story-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #777;
+}
+
+.story-section h2 {
+    font-size: 55px;
+
+    margin-top: 20px;
+}
+
+.story-section h2 span {
+    font-family: Georgia, serif;
+    font-weight: normal;
+}
+
+.story-text p {
+    color: #666;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 800px) {
+
+    .founder-hero {
+        padding: 50px 20px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 55px;
+    }
+
+    .hero-description {
+        margin: auto;
+    }
+
+    .hero-image {
+        height: 400px;
+        max-width: 350px;
+
+        margin: auto;
+
+        order: -1;
+    }
+
+    .hero-side-text {
+        display: none;
+    }
+
+
+    .section-title h2,
+    .work-heading h2,
+    .story-section h2 {
+        font-size: 40px;
+    }
+
+
+    .who-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .who-item {
+        border-right: none;
+        border-bottom: 1px solid #bbb;
+    }
+
+
+    .work-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .work-card.active {
+        transform: none;
+    }
+
+
+    .story-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+
+        padding: 70px 25px;
+    }
+}
