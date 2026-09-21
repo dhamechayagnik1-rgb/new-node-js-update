@@ -9,7 +9,7 @@ function Founder() {
             {/* ================= HERO ================= */}
             <section className="founder-hero">
 
-                <div className="hero-content">
+                <div className="hero-contents">
 
                     <div className="hero-text">
                         <p className="small-title">
