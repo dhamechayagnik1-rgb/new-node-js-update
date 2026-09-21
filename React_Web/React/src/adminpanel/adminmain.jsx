@@ -1,5 +1,4 @@
 
-import './adminmain.css'
 
 function AdminMain() {
     return (
