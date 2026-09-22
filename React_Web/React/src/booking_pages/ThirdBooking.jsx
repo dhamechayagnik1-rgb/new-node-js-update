@@ -50,7 +50,7 @@ function ThirdBooking() {
 
                             <input
                                 type="text"
-                                
+                                required
                                 id="fullname"
                                 value={formData.name}
                                 onChange = {(e) => setformData({
@@ -73,6 +73,7 @@ function ThirdBooking() {
 
                             <input
                                 type="email"
+                                required
                                 id="email"
                                 placeholder="Email address"
                                 value={formData.email}
@@ -96,6 +97,7 @@ function ThirdBooking() {
                             <input
                                 type="tel"
                                 id="phone"
+                                required
                                 placeholder="Phone number"
                                 value={formData.mobile}
                                 onChange = {(e) => setformData({
@@ -118,6 +120,7 @@ function ThirdBooking() {
                             <input
                                 type="text"
                                 id="company"
+                                required
                                 value={formData.company}
                                 onChange = {(e) => setformData({
                                     name: formData.name, 
@@ -140,6 +143,7 @@ function ThirdBooking() {
 
                             <textarea
                                 id="message"
+                                required
                                 value={formData.content}
                                 onChange = {(e) => setformData({
                                     name: formData.name, 
