@@ -231,7 +231,7 @@ body {
 
 .confirm-btn {
     height: 55px;
-
+    width: 100%;
     border: none;
     border-radius: 12px;
 
@@ -246,6 +246,10 @@ body {
     box-shadow: 0 5px 15px rgba(30, 90, 220, 0.20);
 
     transition: 0.2s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .confirm-btn:hover {
@@ -257,6 +261,40 @@ body {
     transform: translateY(0);
 }
 
+
+/* Loading state */
+.confirm-btn.loading {
+    width: 55px;
+    height: 55px;
+    padding: 0;
+    margin: 0 auto;
+
+    border-radius: 50%;
+    background: #2864e5;
+
+    cursor: not-allowed;
+}
+
+
+/* Spinner */
+.confirm-loader {
+    width: 22px;
+    height: 22px;
+
+    border: 3px solid rgba(255, 255, 255, 0.35);
+    border-top: 3px solid #ffffff;
+
+    border-radius: 50%;
+
+    animation: confirmSpin 0.7s linear infinite;
+}
+
+
+@keyframes confirmSpin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 /* =========================
    MOBILE

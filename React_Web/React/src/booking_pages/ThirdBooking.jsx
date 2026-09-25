@@ -6,8 +6,9 @@ import { DisplayContext } from '../context'
 
 
 function ThirdBooking() {
+    
 
-    const {slide,setSlide,setActive,active, formData, setformData,blogs, setBlogs,handleSubmit} = useContext(DisplayContext)
+    const {loading, setLoading, slide, setSlide, setActive, active, formData, setformData, blogs, setBlogs, handleSubmit } = useContext(DisplayContext)
 
     return (
 
@@ -24,10 +25,10 @@ function ThirdBooking() {
 
                         <div class="summary-item">
                             <span>Service:</span>
-                            <strong>{active == 1?"Software Development":"Taxation Advisory"}</strong>
+                            <strong>{active == 1 ? "Software Development" : "Taxation Advisory"}</strong>
                         </div>
 
-                       
+
 
                     </div>
 
@@ -53,12 +54,12 @@ function ThirdBooking() {
                                 required
                                 id="fullname"
                                 value={formData.name}
-                                onChange = {(e) => setformData({
-                                    name: e.target.value, 
-                                    mobile:formData.mobile,
-                                    email:formData.email,
-                                    company:formData.company,
-                                    content:formData.content
+                                onChange={(e) => setformData({
+                                    name: e.target.value,
+                                    mobile: formData.mobile,
+                                    email: formData.email,
+                                    company: formData.company,
+                                    content: formData.content
                                 })}
                                 placeholder="Full name"
                             />
@@ -77,12 +78,12 @@ function ThirdBooking() {
                                 id="email"
                                 placeholder="Email address"
                                 value={formData.email}
-                                onChange = {(e) => setformData({
-                                    name: formData.name, 
-                                    mobile:formData.mobile,
-                                    email:e.target.value,
-                                    company:formData.company,
-                                    content:formData.content
+                                onChange={(e) => setformData({
+                                    name: formData.name,
+                                    mobile: formData.mobile,
+                                    email: e.target.value,
+                                    company: formData.company,
+                                    content: formData.content
                                 })}
                             />
                         </div>
@@ -100,12 +101,12 @@ function ThirdBooking() {
                                 required
                                 placeholder="Phone number"
                                 value={formData.mobile}
-                                onChange = {(e) => setformData({
-                                    name: formData.name, 
-                                    mobile:e.target.value,
-                                    email:formData.email,
-                                    company:formData.company,
-                                    content:formData.content
+                                onChange={(e) => setformData({
+                                    name: formData.name,
+                                    mobile: e.target.value,
+                                    email: formData.email,
+                                    company: formData.company,
+                                    content: formData.content
                                 })}
                             />
                         </div>
@@ -122,12 +123,12 @@ function ThirdBooking() {
                                 id="company"
                                 required
                                 value={formData.company}
-                                onChange = {(e) => setformData({
-                                    name: formData.name, 
-                                    mobile:formData.mobile,
-                                    email:formData.email,
-                                    company:e.target.value,
-                                    content:formData.content
+                                onChange={(e) => setformData({
+                                    name: formData.name,
+                                    mobile: formData.mobile,
+                                    email: formData.email,
+                                    company: e.target.value,
+                                    content: formData.content
                                 })}
                                 placeholder="Company name (optional)"
                             />
@@ -145,12 +146,12 @@ function ThirdBooking() {
                                 id="message"
                                 required
                                 value={formData.content}
-                                onChange = {(e) => setformData({
-                                    name: formData.name, 
-                                    mobile:formData.mobile,
-                                    email:formData.email,
-                                    company:formData.company,
-                                    content:e.target.value
+                                onChange={(e) => setformData({
+                                    name: formData.name,
+                                    mobile: formData.mobile,
+                                    email: formData.email,
+                                    company: formData.company,
+                                    content: e.target.value
                                 })}
                                 placeholder="Briefly describe what you need help with..."
                             ></textarea>
@@ -167,8 +168,16 @@ function ThirdBooking() {
                             Back
                         </button>
 
-                        <button type="submit" class="confirm-btn">
-                            Confirm Booking
+                        <button
+                            className={`confirm-btn ${loading ? "loading" : ""}`}
+                            disabled={loading}
+                            
+                        >
+                            {loading ? (
+                                <span className="confirm-loader"></span>
+                            ) : (
+                                "Confirm"
+                            )}
                         </button>
 
                     </div>

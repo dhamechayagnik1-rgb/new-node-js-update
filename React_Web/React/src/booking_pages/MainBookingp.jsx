@@ -23,29 +23,40 @@ function MainBookingp(props) {
     const [blogs, setBlogs] = useState([]);
     const [Text, setText] = useState("")
     const isAdmin = window.location.pathname === "/admin";
+    const [loading, setLoading] = useState(false);
 
 
     async function handleSubmit(e) {
 
+        setLoading(true);
         e.preventDefault();
 
-        setBlogs([{
-            name: formData.name, mobile: formData.mobile
-            , email: formData.email, company: formData.company
-            , content: formData.content
-        }, ...blogs]);
-        // Add a new document with a generated id.
-        const docRef = await addDoc(collection(db, "blogs"), {
-            name: formData.name, 
-            mobile: formData.mobile
-            , email: formData.email,
-             company: formData.company
-            , content: formData.content,
-            createdon: new Date()
-        });
-        //console.log("Document written with ID: ", docRef.id);
-        console.log(blogs);
-        setformData({ text: "", name: "", mobile: "", email: "", company: "", content: "" });
+        try {
+            // Yaha tumhara Firebase / API wala code
+            setBlogs([{
+                name: formData.name, mobile: formData.mobile
+                , email: formData.email, company: formData.company
+                , content: formData.content
+            }, ...blogs]);
+            // Add a new document with a generated id.
+            const docRef = await addDoc(collection(db, "blogs"), {
+                name: formData.name,
+                mobile: formData.mobile
+                , email: formData.email,
+                company: formData.company
+                , content: formData.content,
+                createdon: new Date()
+            });
+            //console.log("Document written with ID: ", docRef.id);
+            console.log(blogs);
+            setformData({ text: "", name: "", mobile: "", email: "", company: "", content: "" });
+
+        } catch (error) {
+            console.error(error);
+
+        } finally {
+            setLoading(false);
+        }
 
     }
 
@@ -98,7 +109,7 @@ function MainBookingp(props) {
 
 
                     </div>
-                    <DisplayContext.Provider value={{ handleSubmit, slide, setSlide, active, setActive, formData, setformData, blogs, setBlogs }} >
+                    <DisplayContext.Provider value={{ handleSubmit, loading, setLoading, slide, setSlide, active, setActive, formData, setformData, blogs, setBlogs }} >
                         {slide == 1 ? <ThirdBooking /> : slide == 0 ? <FirstBookingPage /> : null}
                         {isAdmin ? (
                             <Admin />
