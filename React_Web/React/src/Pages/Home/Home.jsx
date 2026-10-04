@@ -1,9 +1,20 @@
 
 
 import './Home.css'
+import { useEffect } from 'react'
+import { setSEO, upsertJsonLd, organizationSchema } from '../../seo'
 
 
 function Home() {
+  useEffect(() => {
+    setSEO({
+      title: 'Yagnik | Software Development & Taxation Services in Rajkot',
+      description: 'Yagnik provides custom software development, website development and taxation services for businesses in Rajkot, Gujarat and across India.',
+      path: '/'
+    })
+    upsertJsonLd(organizationSchema)
+  }, [])
+
   
   return (
     <>
@@ -20,8 +31,8 @@ function Home() {
 
 
         
-            <h1> Software. Taxation.<br/>
-                <span>Simplified.</span>
+            <h1>Software Development &amp; Taxation<br/>
+                <span>Services in Rajkot.</span>
             </h1>
 
 

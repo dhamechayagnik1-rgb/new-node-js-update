@@ -1,9 +1,19 @@
 
 
 import './Contact.css'
+import { useEffect } from 'react'
+import { setSEO } from '../../seo'
 
 
 function Contact() {
+    useEffect(() => {
+        setSEO({
+            title: 'Contact Yagnik | Rajkot Software & Taxation Services',
+            description: 'Contact Yagnik for software development, website development and taxation enquiries in Rajkot, Gujarat and across India.',
+            path: '/Contact'
+        })
+    }, [])
+
 
     return (
         <>

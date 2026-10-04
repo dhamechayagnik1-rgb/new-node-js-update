@@ -1,9 +1,19 @@
 
 
 import './Services.css'
+import { useEffect } from 'react'
+import { setSEO } from '../../seo'
 
 
 function Services() {
+    useEffect(() => {
+        setSEO({
+            title: 'Software Development & Taxation Services | Yagnik',
+            description: 'Custom software, web application and business taxation services from Yagnik for businesses in Rajkot, Gujarat and across India.',
+            path: '/Services'
+        })
+    }, [])
+
   
   return (
     <>

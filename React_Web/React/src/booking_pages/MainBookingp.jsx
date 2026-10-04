@@ -11,11 +11,21 @@ import { date, Time } from './day'
 import Admin from '../adminpanel/admin'
 import { db } from '../firebaseinit'
 import { collection, addDoc } from "firebase/firestore";
+import { useEffect } from 'react'
+import { setSEO } from '../seo'
 
 
 
 
 function MainBookingp(props) {
+    useEffect(() => {
+        setSEO({
+            title: 'Book a Consultation | Yagnik Software & Taxation Services',
+            description: 'Book a software development or taxation consultation with Yagnik for your business in Rajkot, Gujarat and across India.',
+            path: '/booking'
+        })
+    }, [])
+
 
     const [slide, setSlide] = useState(0)
     const [active, setActive] = useState(0)

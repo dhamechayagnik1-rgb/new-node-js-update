@@ -1,8 +1,18 @@
 import React from "react";
 import "./Founder.css";
 import profile from "./images/profile.jpeg";
+import { useEffect } from 'react'
+import { setSEO } from '../../seo'
 
 function Founder() {
+    useEffect(() => {
+        setSEO({
+            title: 'Yagnik Dhamecha | Founder of Yagnik',
+            description: 'Meet Dhamecha Yagnik, founder of Yagnik, building software and business taxation solutions from Rajkot, Gujarat.',
+            path: '/Founder'
+        })
+    }, [])
+
     return (
         <div className="founder-page">
 

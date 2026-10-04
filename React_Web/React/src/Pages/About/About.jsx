@@ -1,9 +1,19 @@
 
 
 import './About.css'
+import { useEffect } from 'react'
+import { setSEO } from '../../seo'
 
 
 function About() {
+    useEffect(() => {
+        setSEO({
+            title: 'About Yagnik | Software & Taxation Services',
+            description: 'Learn about Yagnik, a Rajkot-based business focused on custom software development and taxation services.',
+            path: '/About'
+        })
+    }, [])
+
 
     return (
         <>
@@ -67,7 +77,7 @@ function About() {
 
                             <div>
                                 <span>Founded</span>
-                                <strong>2019</strong>
+                                <strong>2024</strong>
                                 <small>Years building trust</small>
                             </div>
                         </div>
