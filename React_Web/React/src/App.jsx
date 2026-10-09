@@ -18,6 +18,7 @@ import Admin from './adminpanel/admin';
 import { DisplayContext } from './context';
 import AdminMain from './adminpanel/adminmain';
 import Founder from './Pages/Founder/Founder';
+import BlogsNews from './blogs/Blog.New';
 
 
 function App() {
@@ -31,9 +32,10 @@ function App() {
     { path: "/Services", element: <Services /> },
     { path: "/Contact", element: <Contact /> },
     { path: "/admin", element: <Admin /> },
-    {path:"/Founder",element: <Founder/>}
-    
-    
+    { path: "/Founder", element: <Founder /> },
+    { path: "/Blogs", element: <BlogsNews /> }
+
+
 
   ]);
 
@@ -42,14 +44,14 @@ function App() {
 
   return (
     <>
-      
-        <Navbar />
-        <RouterProvider router={router} />
-        <Footer />
+
+      <Navbar />
+      <RouterProvider router={router} />
+      <Footer />
 
 
     </>
-  
+
   )
 }
 
